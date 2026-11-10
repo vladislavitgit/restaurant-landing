@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <script>
+            history.scrollRestoration = 'manual';
+            if (performance.getEntriesByType('navigation')[0]?.type === 'reload') {
+                history.replaceState(history.state, '', location.pathname + location.search);
+                window.addEventListener('pageshow', () => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                }, { once: true });
+            }
+        </script>
+        <meta name="theme-color" content="#fbfcf8">
+        <meta
+            name="description"
+            content="Italiano – традиционная итальянская кухня."
+        >
+        <title>Italiano – la cucina, con amore</title>
+        <link rel="icon" href="images/favicon.svg?v=2" type="image/svg+xml">
+        <link rel="preload" href="images/table.jpg" as="image">
+        <link rel="stylesheet" href="styles.css">
+        <script type="module" src="script.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <a class="brand" href="#home" aria-label="Italiano">
+                Italiano
+            </a>
+            <div class="header-actions">
+                <div class="languages" role="group" aria-label="Language">
+                    <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+                    <span>/</span>
+                    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="hero" id="home">
+                <div class="hero-copy">
+                    <h1 class="reveal" data-i18n="heroTitle">Ресторан итальянской кухни</h1>
+                    <p class="hero-description reveal">
+                        <span data-i18n="intro">
+                            Домашняя паста, пицца и сезонные салаты.
+                        </span>
+                    </p>
+                    <div class="hero-buttons reveal">
+                        <a class="button" href="#reservation">
+                            <span data-i18n="book">Забронировать столик</span>
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M5 19 19 5M7 5h12v12"></path>
+                            </svg>
+                        </a>
+                        <a class="text-link" href="#menu">
+                            <span data-i18n="explore">Открыть меню</span>
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M12 4v16m-6-6 6 6 6-6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-art reveal">
+                    <img
+                        src="images/table.jpg"
+                        alt="Итальянские блюда на сервированном столе"
+                        data-alt="pasta"
+                        width="1100"
+                        height="1300"
+                        fetchpriority="high"
+                    >
+                </div>
+            </section>
+            <section id="menu" class="section wrap">
+                <h2 class="reveal" data-i18n="navMenu">Меню</h2>
+                <p class="section-description reveal" data-i18n="menuIntro">
+                    Начните с лёгкого салата, выберите пасту или пиццу для всей компании
+                    и оставьте место для десерта. В основе каждого блюда
+                    – простые ингредиенты и итальянские сочетания вкусов.
+                </p>
+                <div class="menu-sections">
+                    <section class="menu-category reveal">
+                        <header>
+                            <img src="images/pasta.jpg" alt="" width="900" height="600" loading="lazy">
+                            <h3 data-i18n="pasta">Паста</h3>
+                        </header>
+                        <ul class="menu-items">
+                            <li>
+                                <h4 lang="it">Tagliatelle della casa</h4>
+                                <span>890 ₽</span>
+                                <p data-i18n="pastaIngredients1">Домашняя паста, томатный соус и свежие травы.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Pasta al pesto</h4>
+                                <span>1 090 ₽</span>
+                                <p data-i18n="pastaIngredients2">Базилик, кедровые орехи и пармезан.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Spaghetti alla carbonara</h4>
+                                <span>990 ₽</span>
+                                <p data-i18n="pastaIngredients3">Гуанчале, желток, пекорино и чёрный перец.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Rigatoni alla norma</h4>
+                                <span>850 ₽</span>
+                                <p data-i18n="pastaIngredients4">Баклажаны, томаты и солёная рикотта.</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu-category reveal">
+                        <header>
+                            <img src="images/pizza.jpg" alt="" width="900" height="600" loading="lazy">
+                            <h3 data-i18n="pizza">Пицца</h3>
+                        </header>
+                        <ul class="menu-items">
+                            <li>
+                                <h4 lang="it">Margherita</h4>
+                                <span>950 ₽</span>
+                                <p data-i18n="pizzaIngredients1">Томаты, моцарелла и свежий базилик.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Diavola</h4>
+                                <span>1 050 ₽</span>
+                                <p data-i18n="pizzaIngredients2">Острая салями, моцарелла и томатный соус.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Quattro formaggi</h4>
+                                <span>1 150 ₽</span>
+                                <p data-i18n="pizzaIngredients3">Моцарелла, горгонзола, фонтина и пармезан.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Prosciutto e funghi</h4>
+                                <span>1 090 ₽</span>
+                                <p data-i18n="pizzaIngredients4">Ветчина, шампиньоны, томаты и моцарелла.</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu-category reveal">
+                        <header>
+                            <img src="images/salad.jpg" alt="" width="900" height="600" loading="lazy">
+                            <h3 data-i18n="salads">Салаты</h3>
+                        </header>
+                        <ul class="menu-items">
+                            <li>
+                                <h4 lang="it">Caprese</h4>
+                                <span>690 ₽</span>
+                                <p data-i18n="saladsIngredients1">Томаты, моцарелла, базилик и оливковое масло.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Panzanella</h4>
+                                <span>590 ₽</span>
+                                <p data-i18n="saladsIngredients2">Тосканский хлеб, томаты, огурец и красный лук.</p>
+                            </li>
+                            <li>
+                                <h4 lang="it">Rucola e grana</h4>
+                                <span>650 ₽</span>
+                                <p data-i18n="saladsIngredients3">Руккола, лепестки грана падано и лимон.</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="menu-category reveal">
+                        <header>
+                            <img src="images/dessert.jpg" alt="" width="900" height="600" loading="lazy">
+                            <h3 data-i18n="dessert">Десерты</h3>
+                        </header>
+                        <ul class="menu-items">
+                            <li>
+                                <h4 lang="it">Tiramisù classico</h4>
+                                <span>590 ₽</span>
+                                <p data-i18n="dessertIngredients1">Маскарпоне, эспрессо, савоярди и какао.</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+            <section id="about" class="about-section section wrap">
+                <div class="about-intro reveal">
+                    <h2 data-i18n="navAbout">О нас</h2>
+                    <p data-i18n="aboutCopy">
+                        Italiano – место для неспешного обеда и ужина в кругу близких.
+                        Мы готовим по традиционным итальянским рецептам: делаем домашнюю пасту,
+                        замешиваем тесто для пиццы и выбираем свежие овощи для салатов.
+                        В меню – простые сочетания, ароматный базилик, оливковое масло и
+                        выдержанные сыры. Завершите вечер классическим тирамису и чашкой эспрессо.
+                    </p>
+                    <p data-i18n="aboutTable">
+                        Приходите на обед вдвоём или собирайтесь большой компанией.
+                        Пиццу удобно разделить на всех, салаты дополнят основные блюда,
+                        а пасту можно выбрать под настроение: с нежным песто, насыщенным
+                        томатным соусом или пикантным пекорино.
+                    </p>
+                    <p class="opening-hours" data-i18n="hours">Каждый день · 12:00–23:00</p>
+                </div>
+                <div class="map-card reveal">
+                    <div class="map-heading">
+                        <h3 data-i18n="mapTitle">Расположение</h3>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            id="restaurant-map"
+                            title="Расположение на Яндекс Картах"
+                            loading="lazy"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A61a0291ba3c11a85eca4ca3b6d78f5a16f99619e5040240d9819cc43792c0459&amp;source=constructor&amp;lang=ru_RU"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                </div>
+            </section>
+            <section id="reservation" class="reservation section wrap">
+                <div class="reservation-copy reveal">
+                    <h2>
+                        <span data-i18n="formTitle">Бронирование столика</span>
+                    </h2>
+                    <p class="section-description" data-i18n="bookingIntro">
+                        Выберите удобную дату, время и количество гостей. В пожеланиях расскажите, планируете ли вы тихий ужин, встречу с друзьями или семейный праздник.
+                    </p>
+                    <p class="section-description" data-i18n="bookingDetails">
+                        Если у вас есть пищевые ограничения, укажите их вместе с пожеланиями к столику. Так все детали вашего вечера будут собраны в одном месте.
+                    </p>
+                </div>
+                <div class="booking-panel reveal">
+                    <form id="booking" autocomplete="on">
+                        <div class="calendar" aria-labelledby="calendar-label">
+                            <input type="hidden" name="date" id="date">
+                            <span class="field-label" data-i18n="date" id="calendar-label">Дата</span>
+                            <div class="calendar-header">
+                                <button type="button" id="month-prev">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M20 12H4m6-6-6 6 6 6"></path>
+                                    </svg>
+                                </button>
+                                <h3 id="calendar-month" aria-live="polite"></h3>
+                                <button type="button" id="month-next">
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M4 12h16m-6-6 6 6-6 6"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays" aria-hidden="true"></div>
+                            <div class="calendar-days" role="group" aria-labelledby="calendar-month"></div>
+                            <p id="calendar-selected" aria-live="polite"></p>
+                        </div>
+                        <div class="form-grid">
+                            <div class="custom-select" data-select="guests">
+                                <span class="field-label" id="guests-label" data-i18n="guests">Количество гостей</span>
+                                <input type="hidden" id="guests" name="guests" value="2">
+                                <button
+                                    type="button"
+                                    class="select-trigger"
+                                    role="combobox"
+                                    aria-labelledby="guests-label guests-value"
+                                    aria-expanded="false"
+                                    aria-controls="guests-list"
+                                    aria-haspopup="listbox"
+                                >
+                                    <span id="guests-value">2</span>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div
+                                    class="select-list"
+                                    id="guests-list"
+                                    role="listbox"
+                                    aria-labelledby="guests-label"
+                                    hidden
+                                ></div>
+                            </div>
+                            <div class="custom-select" data-select="time">
+                                <span class="field-label" id="time-label" data-i18n="time">Время</span>
+                                <input type="hidden" id="time" name="time">
+                                <button
+                                    type="button"
+                                    class="select-trigger"
+                                    role="combobox"
+                                    aria-labelledby="time-label time-value"
+                                    aria-expanded="false"
+                                    aria-controls="time-list"
+                                    aria-haspopup="listbox"
+                                >
+                                    <span id="time-value"></span>
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="m6 9 6 6 6-6"></path>
+                                    </svg>
+                                </button>
+                                <div
+                                    class="select-list"
+                                    id="time-list"
+                                    role="listbox"
+                                    aria-labelledby="time-label"
+                                    hidden
+                                ></div>
+                            </div>
+                            <label>
+                                <span data-i18n="name">Ваше имя</span>
+                                <input
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                    maxlength="100"
+                                    data-placeholder="namePlaceholder"
+                                >
+                            </label>
+                            <label>
+                                <span data-i18n="phone">Номер телефона</span>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    placeholder="+7 (999) 123-45-67"
+                                    required
+                                    maxlength="30"
+                                    aria-describedby="phone-hint"
+                                >
+                                <span class="phone-hint" id="phone-hint" data-i18n="phoneHint">
+                                    Для другого кода страны начните с +.
+                                </span>
+                            </label>
+                            <label class="wide">
+                                <span data-i18n="wishes">Повод и пожелания</span>
+                                <textarea
+                                    name="wishes"
+                                    rows="2"
+                                    maxlength="1000"
+                                    data-placeholder="wishesPlaceholder"
+                                ></textarea>
+                            </label>
+                        </div>
+                        <p class="form-error" id="form-error" role="alert"></p>
+                        <p class="demo-note" data-i18n="demo">Демо-бронирование: данные никуда не отправляются и не сохраняются.</p>
+                        <button class="button submit" type="submit">
+                            <span data-i18n="submit">Забронировать столик</span>
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M5 19 19 5M7 5h12v12"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="booking-result" id="booking-result" hidden role="status" tabindex="-1">
+                        <span class="success-symbol" aria-hidden="true">✓</span>
+                        <h3>
+                            <span data-i18n="successTitle">Предпросмотр брони</span>
+                        </h3>
+                        <p id="summary"></p>
+                        <button type="button" class="button" id="again">
+                            <span data-i18n="again">Вернуться к форме</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer wrap">
+            <a class="brand" href="#home">
+                Italiano
+            </a>
+            <a class="back-top" href="#home" aria-label="Back to top">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path d="M12 20V4m-6 6 6-6 6 6"></path>
+                </svg>
+            </a>
+        </footer>
+    </body>
+</html>

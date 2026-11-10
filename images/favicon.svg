@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <defs>
+        <clipPath id="corners">
+            <rect width="64" height="64" rx="10"/>
+        </clipPath>
+    </defs>
+    <g clip-path="url(#corners)">
+        <path fill="#258652" d="M0 0h22v64H0z"/>
+        <path fill="#fff" d="M22 0h20v64H22z"/>
+        <path fill="#ca4146" d="M42 0h22v64H42z"/>
+        <path fill="#f1e8da" d="M0 10h64v44H0z"/>
+    </g>
+    <path fill="#3e3027" d="M27 14h25l-2 4h-7L32 46h8l-2 4H12l2-4h8l11-28h-8z"/>
+</svg>
