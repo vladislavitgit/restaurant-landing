@@ -12,8 +12,10 @@
 ## Превью сайта
 
 <table>
-<a href="docs/screenshots/l1.png"><img src="docs/screenshots/l1.png" width="400" alt="Светлая тема — скриншот 1"></a>
-<a href="docs/screenshots/l2.png"><img src="docs/screenshots/l2.png" width="400" alt="Светлая тема — скриншот 2"></a>
-<a href="docs/screenshots/l3.png"><img src="docs/screenshots/l3.png" width="400" alt="Светлая тема — скриншот 3"></a>
-<a href="docs/screenshots/l4.png"><img src="docs/screenshots/l4.png" width="400" alt="Светлая тема — скриншот 4"></a>
+  <tr>
+    <td><a href="docs/screenshots/l1.png"><img src="docs/screenshots/l1.png" width="400" alt="Светлая тема — скриншот 1"></a></td>
+    <td><a href="docs/screenshots/l2.png"><img src="docs/screenshots/l2.png" width="400" alt="Светлая тема — скриншот 2"></a></td>
+    <td><a href="docs/screenshots/l3.png"><img src="docs/screenshots/l3.png" width="400" alt="Светлая тема — скриншот 3"></a></td>
+    <td><a href="docs/screenshots/l4.png"><img src="docs/screenshots/l4.png" width="400" alt="Светлая тема — скриншот 4"></a></td>
+  </tr>
 </table>
